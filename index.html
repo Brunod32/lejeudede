@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Bootstrap  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--  Style CSS personnel  -->
+  <link rel="stylesheet" href="style.css">
+  <title>Le jeux de dé</title>
+</head>
+<body>
+  <div class="modal fade" id="rules" tabindex="-1" role="dialog" aria-labelledby="rulesExplication" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Règles du jeu</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Le jeu comprend 2 joueurs.<br>
+          Chaque joueur possède un <strong>score temporaire</strong> (Score du round) et un <strong>score global</strong> (Score global). 
+          À chaque tour, le joueur a son score de round initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le résultat d’un lancer est ajouté au score de round.
+          Lors de son tour, le joueur peut décider à tout moment de: <br>
+          - Cliquer sur l’option <strong>“Valider le lancé”</strong>, qui permet d’envoyer les points du score de ROUND vers le score global. Ce sera alors le tour de l’autre joueur.<br>
+          -<strong> Lancer le dé</strong>. S’il obtient un 1, son score du round est perdu et c’est la fin de son tour.
+          Le premier joueur qui atteint les <strong>100 points</strong> sur global gagne le jeu.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="newgame" tabindex="-1" role="dialog" aria-labelledby="beginNewGame" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Règles du jeu</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="intro">
+    <h1>Jeu de dé</h1>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#rules" id="rules">Règles du jeu</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newgame" id="newgame">Nouvelle partie</button>
+  </div>
+  <div class="row justify-content-around text-center">
+    <div class="col-10 col-md-3 mb-5 mt-2">
+      <div class="card" id="player1">
+        <div class="text-center">
+          <img src="./pictures/face-angel.png" alt="player 1">
+        </div>
+        <div class="card-body">
+          <p class="card-text" id="round1">Score du round: </p>
+          <p class="card-text" id="global1">Score global: </p>
+        </div>
+      </div>
+    </div>
+    <div id="btn-container">
+      <button type="button" id="roll" class="btn btn-primary">Lancer le dé</button>
+      <button type="button" id="hold" class="btn btn-primary">Valider le lancé</button>
+    </div>
+    <div class="col-10 col-md-3 mb-5 mt-2">
+      <div class="card" id="player2">
+        <div class="text-center">
+          <img src="./pictures/face-devilish.png" alt="player 2">
+        </div>
+        <div class="card-body">
+          <p class="card-text" id="round2">Score du round: </p>
+          <p class="card-text" id="global2">Score global: </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  script Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!--  Javascript  -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+  background-color: lightgreen;
+  font-family: lato;
+}
+
+h1 {
+  text-align: center;
+}
+
+#intro {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding: 10px;
+  width: 50%;
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 5px black;
+  text-align: center;
+}
+
+#player1,
+#player2 {
+  border: solid black 2px;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 25px;
+}
+
+#roll,
+#hold {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  }
+
+#btn-container {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  text-align: center;
+}
