@@ -11,6 +11,9 @@
   <title>Le jeux de dé</title>
 </head>
 <body>
+
+  <!--  Modal règles du jeu-->
+
   <div class="modal fade" id="rules" tabindex="-1" role="dialog" aria-labelledby="rulesExplication" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -36,7 +39,9 @@
     </div>
   </div>
 
-  <div class="modal fade" id="newgame" tabindex="-1" role="dialog" aria-labelledby="beginNewGame" aria-hidden="true">
+  <!-- Modal nouvelle partie  -->
+
+  <div class="modal fade" id="newGame" tabindex="-1" role="dialog" aria-labelledby="beginNewGame" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -46,10 +51,14 @@
           </button>
         </div>
         <div class="modal-body">
-          
+          <label for="firstPlayer">Joueur 1: </label>
+          <input type="text" id="firstPlayer">
+          <br>
+          <label for="secondPlayer">Joueur 2: </label>
+          <input type="text" id="secondPlayer">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-secondary" id="closeModal" data-dismiss="modal">Fermer</button>
         </div>
       </div>
     </div>
@@ -58,7 +67,7 @@
   <div id="intro">
     <h1>Jeu de dé</h1>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#rules" id="rules">Règles du jeu</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newgame" id="newgame">Nouvelle partie</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newGame" id="newGame">Nouvelle partie</button>
   </div>
   <div class="row justify-content-around text-center">
     <div class="col-10 col-md-3 mb-5 mt-2">
@@ -67,6 +76,7 @@
           <img src="./pictures/face-angel.png" alt="player 1">
         </div>
         <div class="card-body">
+          <h5 class="card-title" id="name1"></h5>
           <p class="card-text" id="round1">Score du round: </p>
           <p class="card-text" id="global1">Score global: </p>
         </div>
@@ -82,6 +92,7 @@
           <img src="./pictures/face-devilish.png" alt="player 2">
         </div>
         <div class="card-body">
+          <h5 class="card-title" id="name2"></h5>
           <p class="card-text" id="round2">Score du round: </p>
           <p class="card-text" id="global2">Score global: </p>
         </div>

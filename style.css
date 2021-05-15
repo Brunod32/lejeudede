@@ -45,3 +45,12 @@ img {
   height: auto;
   text-align: center;
 }
+
+.img-modal {
+  width: 50px;
+  height: auto;
+}
+
+.card-title {
+  font-weight: 800;
+}
