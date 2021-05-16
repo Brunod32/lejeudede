@@ -56,9 +56,14 @@
           <br>
           <label for="secondPlayer">Joueur 2: </label>
           <input type="text" id="secondPlayer">
+          <hr>
+          <p>Vous pouvez changer d'avatar à tout moment en cliquant sur l'emoji.</p>
         </div>
+        <audio controls
+          source id="gambling" src="./son/gambling-devil.mp3" type="audio/mp3">
+        </audio>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" id="closeModal" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-secondary" id="closeModal" data-dismiss="modal">Jouer</button>
         </div>
       </div>
     </div>
@@ -73,7 +78,7 @@
     <div class="col-10 col-md-3 mb-5 mt-2">
       <div class="card" id="player1">
         <div class="text-center">
-          <img src="./pictures/face-angel.png" alt="player 1">
+          <img id="avatarPlayer1"src="./pictures/ksmiletris.png" alt="player 1">
         </div>
         <div class="card-body">
           <h5 class="card-title" id="name1"></h5>
@@ -89,7 +94,7 @@
     <div class="col-10 col-md-3 mb-5 mt-2">
       <div class="card" id="player2">
         <div class="text-center">
-          <img src="./pictures/face-devilish.png" alt="player 2">
+          <img id="avatarPlayer2" src="./pictures/ksmiletris.png" alt="player 2">
         </div>
         <div class="card-body">
           <h5 class="card-title" id="name2"></h5>

@@ -44,13 +44,19 @@ img {
   width: 200px;
   height: auto;
   text-align: center;
+  padding-bottom: 20px;
 }
 
-.img-modal {
+.imgModal1,
+.imgModal2 {
   width: 50px;
   height: auto;
 }
 
 .card-title {
   font-weight: 800;
+}
+
+audio {
+  display: none;
 }
