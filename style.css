@@ -1,10 +1,12 @@
 body {
   background-color: lightgreen;
-  font-family: lato;
+  font-family: Lato, Helvetica, sans-serif;
 }
 
 h1 {
   text-align: center;
+  font-weight: 700;
+  color: grey;
 }
 
 #intro {
@@ -30,8 +32,8 @@ h1 {
 
 #roll,
 #hold {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   }
 
@@ -54,9 +56,19 @@ img {
 }
 
 .card-title {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 audio {
   display: none;
+}
+
+#name1,
+#name2,
+#round1,
+#global1,
+#round2,
+#global2 {
+  font-weight: 1000;
+  color: grey;
 }

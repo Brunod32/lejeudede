@@ -55,7 +55,7 @@ avatarPlayer2.addEventListener('click', function() {
   }
 });
 
-
+// fonction lancement du dé
 function effectuerLanceDe() {
   roll.addEventListener('click', lanceDe);
 };
@@ -82,4 +82,5 @@ function lanceDe() {
   }
 
   diceSound.play();
+  
 };
