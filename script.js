@@ -80,4 +80,6 @@ function lanceDe() {
   } else {
     imgDice.setAttribute('src', './pictures/dice-1.png');
   }
+
+  diceSound.play();
 };
