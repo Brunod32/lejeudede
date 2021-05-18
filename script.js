@@ -1,3 +1,4 @@
+// initialisation des variables
 let firstPlayerName = document.getElementById('firstPlayer');
 let secondPlayerName = document.getElementById('secondPlayer');
 let btnModal = document.getElementById('closeModal');
@@ -11,18 +12,22 @@ let current2 = document.getElementById('currentScore2');
 let global1 = document.getElementById('globalScore1');
 let global2 = document.getElementById('globalScore2');
 
-
-// Personnalisation du nom des joueurs
-btnModal.addEventListener('click', function() {
-  name1.textContent = firstPlayerName.value;
-  name2.textContent = secondPlayerName.value;
-  
-  gambling.play()
+// Réinitialisation des scores
+function resetScore() {
   current1.value = 0;
   current2.value = 0;
   global1.value = 0;
   global2.value = 0;
-});
+};
+
+// Personnalisation du nom des joueurs
+btnModal.addEventListener('click', function() {
+  name1.textContent = firstPlayerName.value.toUpperCase();
+  name2.textContent = secondPlayerName.value.toUpperCase();
+  
+  gambling.play()
+  resetScore()
+  });
 
 // personnalisation de l'avatar
 avatarPlayer1.addEventListener('click', function() {
@@ -62,7 +67,8 @@ function effectuerLanceDe() {
 
 function lanceDe() {
   let de = Math.ceil(Math.random() * 6);
-  current1.value = de;
+  current1.textContent = de;
+
   // Affiche l'image du dé en fonction de la valeur de random
   let imgDice = document.getElementById('img-dice');
   if (de === 1) {

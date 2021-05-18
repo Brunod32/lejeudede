@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--  Bootstrap  -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--  Google-->
+    <!--  Google Font  -->
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <!--  Style CSS personnel  -->
   <link rel="stylesheet" href="style.css">
@@ -76,6 +76,7 @@
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#rules" id="rules">Règles du jeu</button>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newGame" id="newGame">Nouvelle partie</button>
   </div>
+  
   <div class="row justify-content-around text-center">
     <div class="col-10 col-md-3 mb-5 mt-2">
       <div class="card" id="player1">
@@ -83,20 +84,21 @@
           <img id="avatarPlayer1"src="./pictures/ksmiletris.png" alt="player 1">
         </div>
         <div class="card-body">
-          <h5 class="card-title" id="name1"></h5>
+          <h5 class="card-title" id="name1">Joueur 1</h5>
           <p class="card-text" id="round1">
-            <label for="currentScore1">Score du round:</label>
+            <label for="currentScore1">ROUND:</label>
             <br>
             <input type="text" id="currentScore1">
           </p>
           <p class="card-text" id="global1">
-            <label for="globalScore1">Score global:</label>
+            <label for="globalScore1">SCORE GLOBAL:</label>
             <br>
             <input type="text" id="globalScore1">
           </p>
         </div>
       </div>
     </div>
+
     <div id="btn-container">
       <div id="picsDe">
         <img id="img-dice" src="./pictures/dice-1.png" alt="1">
@@ -107,20 +109,21 @@
         </audio>
       <button type="button" id="hold" class="btn btn-primary">Valider le lancé</button>
     </div>
+
     <div class="col-10 col-md-3 mb-5 mt-2">
       <div class="card" id="player2">
         <div class="text-center">
           <img id="avatarPlayer2" src="./pictures/ksmiletris.png" alt="player 2">
         </div>
         <div class="card-body">
-          <h5 class="card-title" id="name2"></h5>
+          <h5 class="card-title" id="name2">Joueur 2</h5>
           <p class="card-text" id="round2">
-            <label for="currentScore2">Score round:</label>
+            <label for="currentScore2">ROUND:</label>
             <br>
             <input type="text" id="currentScore2">
           </p>
           <p class="card-text" id="global2">
-            <label for="globalScore2">Score global:</label>
+            <label for="globalScore2">SCORE GLOBAL:</label>
             <br>
             <input type="text" id="globalScore2">
           </p>
