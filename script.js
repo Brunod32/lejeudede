@@ -61,11 +61,11 @@ avatarPlayer2.addEventListener('click', function() {
 });
 
 // fonction lancement du dé
-function effectuerLanceDe() {
-  roll.addEventListener('click', lanceDe);
+function effectuerLancerDe() {
+  roll.addEventListener('click', lancerDe);
 };
 
-function lanceDe() {
+function lancerDe() {
   let de = Math.ceil(Math.random() * 6);
   current1.textContent = de;
 

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Le jeux de dé</title>
 </head>
-<body onload="effectuerLanceDe();">
+<body onload="effectuerLancerDe();">
 
   <!--  Modal règles du jeu-->
 
@@ -30,7 +30,7 @@
           Chaque joueur possède un <strong>score temporaire</strong> (Score du round) et un <strong>score global</strong> (Score global). 
           À chaque tour, le joueur a son score de round initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le résultat d’un lancer est ajouté au score de round.
           Lors de son tour, le joueur peut décider à tout moment de: <br>
-          - Cliquer sur l’option <strong>“Valider le lancé”</strong>, qui permet d’envoyer les points du score de ROUND vers le score global. Ce sera alors le tour de l’autre joueur.<br>
+          - Cliquer sur l’option <strong>“Valider le lancer”</strong>, qui permet d’envoyer les points du score de ROUND vers le score global. Ce sera alors le tour de l’autre joueur.<br>
           -<strong> Lancer le dé</strong>. S’il obtient un 1, son score du round est perdu et c’est la fin de son tour.
           Le premier joueur qui atteint les <strong>100 points</strong> sur global gagne le jeu.
         </div>
@@ -107,7 +107,7 @@
         <audio controls
           id="diceSound" src="./son/dice-sound.mp3" type="audio/mp3">
         </audio>
-      <button type="button" id="hold" class="btn btn-primary">Valider le lancé</button>
+      <button type="button" id="hold" class="btn btn-primary">Valider le lancer</button>
     </div>
 
     <div class="col-10 col-md-3 mb-5 mt-2">
