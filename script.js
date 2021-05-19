@@ -7,6 +7,8 @@ let name2 = document.getElementById('name2');
 let avatarPlayer1 = document.getElementById('avatarPlayer1');
 let avatarPlayer2 = document.getElementById('avatarPlayer2');
 let roll = document.getElementById('roll');
+let tempScore = 0;
+let hold = document.getElementById('hold');
 let current1 = document.getElementById('currentScore1');
 let current2 = document.getElementById('currentScore2');
 let global1 = document.getElementById('globalScore1');
@@ -67,7 +69,8 @@ function effectuerLancerDe() {
 
 function lancerDe() {
   let de = Math.ceil(Math.random() * 6);
-  current1.textContent = de;
+  tempScore += de;
+  current1.value = tempScore;
 
   // Affiche l'image du dé en fonction de la valeur de random
   let imgDice = document.getElementById('img-dice');
@@ -86,7 +89,5 @@ function lancerDe() {
   } else {
     imgDice.setAttribute('src', './pictures/dice-1.png');
   }
-
   diceSound.play();
-  
 };
