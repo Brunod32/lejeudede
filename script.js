@@ -8,6 +8,7 @@ let avatarPlayer1 = document.getElementById('avatarPlayer1');
 let avatarPlayer2 = document.getElementById('avatarPlayer2');
 let roll = document.getElementById('roll');
 let tempScore = 0;
+let tempGlobalScore = 0;
 let hold = document.getElementById('hold');
 let current1 = document.getElementById('currentScore1');
 let current2 = document.getElementById('currentScore2');
@@ -18,8 +19,9 @@ let global2 = document.getElementById('globalScore2');
 function resetScore() {
   current1.value = 0;
   current2.value = 0;
-  global1.value = 0;
-  global2.value = 0;
+  tempScore = 0;
+  // global1.value = 0;
+  // global2.value = 0;
 };
 
 // Personnalisation du nom des joueurs
@@ -65,6 +67,7 @@ avatarPlayer2.addEventListener('click', function() {
 // fonction lancement du dé
 function effectuerLancerDe() {
   roll.addEventListener('click', lancerDe);
+  hold.addEventListener('click', totalDe);
 };
 
 function lancerDe() {
@@ -91,3 +94,10 @@ function lancerDe() {
   }
   diceSound.play();
 };
+
+// fonction cumul des points round dans le total
+function totalDe() {
+  tempGlobalScore += Number(current1.value);
+  global1.value = tempGlobalScore;
+  resetScore();
+}
