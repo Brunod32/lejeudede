@@ -15,14 +15,18 @@ let current2 = document.getElementById('currentScore2');
 let global1 = document.getElementById('globalScore1');
 let global2 = document.getElementById('globalScore2');
 
-// Réinitialisation des scores
+// Réinitialisation des rounds
 function resetScore() {
   current1.value = 0;
   current2.value = 0;
   tempScore = 0;
-  // global1.value = 0;
-  // global2.value = 0;
 };
+
+// Réinitialisation des globaux
+function resetGlobal() {
+  global1.value = 0;
+  global2.value = 0;
+}
 
 // Personnalisation du nom des joueurs
 btnModal.addEventListener('click', function() {
@@ -31,6 +35,7 @@ btnModal.addEventListener('click', function() {
   
   gambling.play()
   resetScore()
+  resetGlobal()
   });
 
 // personnalisation de l'avatar
@@ -72,9 +77,13 @@ function effectuerLancerDe() {
 
 function lancerDe() {
   let de = Math.ceil(Math.random() * 6);
-  tempScore += de;
-  current1.value = tempScore;
-
+  if (de !== 1) {
+    tempScore += de;
+    current1.value = tempScore;
+  } else {
+    resetScore();
+  }
+ 
   // Affiche l'image du dé en fonction de la valeur de random
   let imgDice = document.getElementById('img-dice');
   if (de === 1) {
@@ -100,4 +109,7 @@ function totalDe() {
   tempGlobalScore += Number(current1.value);
   global1.value = tempGlobalScore;
   resetScore();
+  if (global1.value >= 100) {
+    alert('Fin de partie')
+  };
 }

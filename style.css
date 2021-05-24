@@ -76,3 +76,10 @@ audio {
 #picsDe {
   margin-bottom: 50px;
 }
+
+#currentScore1,
+#currentScore2,
+#globalScore1,
+#globalScore2 {
+  width: 4rem;
+}
