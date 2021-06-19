@@ -11,21 +11,21 @@ let tempScore = 0;
 let tempGlobalScore = 0;
 let hold = document.getElementById('hold');
 let current1 = document.getElementById('currentScore1');
-let current2 = document.getElementById('currentScore2');
 let global1 = document.getElementById('globalScore1');
+let current2 = document.getElementById('currentScore2');
 let global2 = document.getElementById('globalScore2');
 
 // Réinitialisation des rounds
 function resetScore() {
-  current1.value = 0;
-  current2.value = 0;
+  current1.textContent = 0;
+  current2.textContent = 0;
   tempScore = 0;
 };
 
 // Réinitialisation des globaux
 function resetGlobal() {
-  global1.value = 0;
-  global2.value = 0;
+  global1.textContent = 0;
+  global2.textContent = 0;
 }
 
 // Personnalisation du nom des joueurs
@@ -79,11 +79,11 @@ function lancerDe() {
   let de = Math.ceil(Math.random() * 6);
   if (de !== 1) {
     tempScore += de;
-    current1.value = tempScore;
+    current1.textContent = tempScore;
   } else {
     resetScore();
   }
- 
+
   // Affiche l'image du dé en fonction de la valeur de random
   let imgDice = document.getElementById('img-dice');
   if (de === 1) {
@@ -106,10 +106,10 @@ function lancerDe() {
 
 // fonction cumul des points round dans le total
 function totalDe() {
-  tempGlobalScore += Number(current1.value);
-  global1.value = tempGlobalScore;
+  tempGlobalScore += Number(current1.textContent);
+  global1.textContent = tempGlobalScore;
   resetScore();
-  if (global1.value >= 100) {
+  if (global1.textContent >= 100) {
     alert('Fin de partie')
   };
 }

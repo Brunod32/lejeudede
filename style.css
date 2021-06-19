@@ -1,6 +1,8 @@
 body {
   background-color: lightgreen;
   font-family: Lato, Helvetica, sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
@@ -9,7 +11,7 @@ h1 {
   color: grey;
 }
 
-#intro {
+#title {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -40,7 +42,7 @@ h1 {
   width: 125px;
   height: 125px;
   border-radius: 50%;
-}
+  }
 
 #roll {
   border-radius: 100px 0 0 100px;
@@ -78,23 +80,25 @@ audio {
 
 #name1,
 #name2,
-#round1,
-#global1,
-#round2,
-#global2 {
+#round,
+#global,
+#currentScore1,
+#currentScore2,
+#globalScore1,
+#globalScore2 {
   font-weight: 1000;
   color: grey;
-}
-
-#picsDe {
-  margin-bottom: 50px;
 }
 
 #currentScore1,
 #currentScore2,
 #globalScore1,
 #globalScore2 {
-  width: 4rem;
+  font-size: 3rem;
+}
+
+#picsDe {
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 767px) {

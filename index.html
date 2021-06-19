@@ -53,10 +53,10 @@
           </button>
         </div>
         <div class="modal-body">
-          <label for="firstPlayer">Joueur 1: </label>
+          <label for="firstPlayer">Joueur 1:</label>
           <input type="text" id="firstPlayer">
           <br>
-          <label for="secondPlayer">Joueur 2: </label>
+          <label for="secondPlayer">Joueur 2:</label>
           <input type="text" id="secondPlayer">
           <hr>
           <p>Vous pouvez changer d'avatar à tout moment en cliquant sur l'emoji.</p>
@@ -70,14 +70,17 @@
       </div>
     </div>
   </div>
-
-  <div id="intro">
+  <div id="title">
     <h1>Jeu de dé</h1>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#rules" id="rules">Règles du jeu</button>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newGame" id="newGame">Nouvelle partie</button>
   </div>
-  
+  <!--  Page de jeu  -->
+
   <div class="row justify-content-around text-center">
+
+    <!--  profil joueur 1-->
+
     <div class="col-10 col-md-3 mb-5 mt-2">
       <div class="card" id="player1">
         <div class="text-center">
@@ -85,19 +88,23 @@
         </div>
         <div class="card-body">
           <h5 class="card-title" id="name1">Joueur 1</h5>
-          <p class="card-text" id="round1">
-            <label for="currentScore1">ROUND:</label>
-            <br>
-            <input type="text" id="currentScore1">
+          <p class="card-text">
+            <div id="round">
+              Round :
+            </div>
+            <div id="currentScore1"></div>
           </p>
-          <p class="card-text" id="global1">
-            <label for="globalScore1">SCORE GLOBAL:</label>
-            <br>
-            <input type="text" id="globalScore1">
+          <p class="card-text">
+            <div id="global">
+              SCORE GLOBAL :
+            </div>
+            <div id="globalScore1"></div>
           </p>
         </div>
       </div>
     </div>
+
+    <!--  Boutons de jeu  -->
 
     <div id="btn-container">
       <div id="picsDe">
@@ -110,6 +117,8 @@
       <button type="button" id="hold" class="btn btn-primary">Valider le lancer</button>
     </div>
 
+    <!-- profil joueur 2-->
+
     <div class="col-10 col-md-3 mb-5 mt-2">
       <div class="card" id="player2">
         <div class="text-center">
@@ -117,15 +126,17 @@
         </div>
         <div class="card-body">
           <h5 class="card-title" id="name2">Joueur 2</h5>
-          <p class="card-text" id="round2">
-            <label for="currentScore2">ROUND:</label>
-            <br>
-            <input type="text" id="currentScore2">
+          <p class="card-text">
+            <div id="round">
+              Round :
+            </div>
+            <div id="currentScore2"></div>
           </p>
-          <p class="card-text" id="global2">
-            <label for="globalScore2">SCORE GLOBAL:</label>
-            <br>
-            <input type="text" id="globalScore2">
+          <p class="card-text">
+            <div id="global">
+              SCORE GLOBAL :
+            </div>
+            <div id="globalScore2"></div>
           </p>
         </div>
       </div>
