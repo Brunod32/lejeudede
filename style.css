@@ -30,12 +30,25 @@ h1 {
   border-radius: 25px;
 }
 
+#avatarPlayer1,
+#avatarPlayer2 {
+  padding-top: 15px;
+}
+
 #roll,
 #hold {
   width: 125px;
   height: 125px;
   border-radius: 50%;
-  }
+}
+
+#roll {
+  border-radius: 100px 0 0 100px;
+}
+
+#hold {
+  border-radius: 0 100px 100px 0;
+}
 
 #btn-container {
   margin-top: auto;
@@ -82,4 +95,11 @@ audio {
 #globalScore1,
 #globalScore2 {
   width: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  #roll,
+  #hold {
+  margin-bottom: 30px;
+  }
 }
