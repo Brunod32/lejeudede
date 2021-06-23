@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Le jeux de dé</title>
 </head>
-<body onload="effectuerLancerDe();">
+<body onload="letsPlayGame();">
 
   <!--  Modal règles du jeu-->
 
@@ -59,7 +59,12 @@
           <label for="secondPlayer">Joueur 2:</label>
           <input type="text" id="secondPlayer">
           <hr>
-          <p>Vous pouvez changer d'avatar à tout moment en cliquant sur l'emoji.</p>
+          <p>Vous pouvez changer d'avatar (
+            <img class="avatar" src="./pictures/face-angel.png" alt="face-angel">,
+            <img class="avatar" src="./pictures/face-devilish.png" alt="face-devilish">,
+            <img class="avatar" src="./pictures/face-smile.png" alt="face-smile">,
+            <img class="avatar" src="./pictures/crystal-smiley.png" alt="rystal-smiley">
+            ) à tout moment en cliquant sur l'emoji du profil de chaque joueur.</p>
         </div>
         <audio controls
           source id="gambling" src="./son/gambling-devil.mp3" type="audio/mp3">
@@ -92,13 +97,13 @@
             <div id="round">
               Round :
             </div>
-            <div id="currentScore1"></div>
+            <div id="currentScore1">0</div>
           </p>
           <p class="card-text">
             <div id="global">
               SCORE GLOBAL :
             </div>
-            <div id="globalScore1"></div>
+            <div id="globalScore1">0</div>
           </p>
         </div>
       </div>
@@ -130,19 +135,27 @@
             <div id="round">
               Round :
             </div>
-            <div id="currentScore2"></div>
+            <div id="currentScore2">0</div>
           </p>
           <p class="card-text">
             <div id="global">
               SCORE GLOBAL :
             </div>
-            <div id="globalScore2"></div>
+            <div id="globalScore2">0</div>
           </p>
         </div>
       </div>
     </div>
   </div>
 
+  <!--  son de victoire et d'erreur de dice1  -->
+
+  <audio controls
+    id="lose" src="./son/lose.mp3" type="audio/mp3">
+  </audio>
+  <audio controls
+    id="bravo" src="./son/bravo.mp3" type="audio/mp3">
+  </audio>
   <!--  script Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -25,6 +25,11 @@ h1 {
   text-align: center;
 }
 
+.avatar {
+  width: 30px;
+  height: auto;
+}
+
 #player1,
 #player2 {
   border: solid black 2px;
@@ -105,5 +110,10 @@ audio {
   #roll,
   #hold {
   margin-bottom: 30px;
+  }
+
+  #rules,
+  #newGame {
+    margin: 3px;
   }
 }
